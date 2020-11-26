@@ -1,0 +1,20 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+pm.test("Validate name", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.firstMame).to.eql("Gabriel");
+});
+pm.test("Validate lastname", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.lastName).to.eql("Fuentes");
+});
+pm.test("Validate age", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.age).to.eql(11);
+});
+
+pm.test("Validate Id", function () {
+    var jsonData = pm.response.json();
+    pm.expect(jsonData.id).to.eql(id.lenght>0);
+});
